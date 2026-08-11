@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>首頁</title>
+
+    <!--Bootstrap Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <script type="module" crossorigin src="/2026_HexSchool_Layout_mission6/assets/main-B6OzCE-M.js"></script>
+    <link rel="stylesheet" crossorigin href="/2026_HexSchool_Layout_mission6/assets/main-DcZaEEq9.css">
+  </head>
+
+  <body>
+    <!--
+  navbar-expand-lg：在桌機版時全部展開
+-->
+
+<nav class="navbar navbar-expand-lg fixed-top py-3 py-lg-4 align-items-center">
+  <div class="container justify-content-start">
+    <!--Logo-->
+    <a class="navbar-brand" href="index.html">
+      <img src="/2026_HexSchool_Layout_mission6/assets/Logo-BVlqBbcd.png" alt="logo" class="logo" />
+    </a>
+
+    <!--手機版搜尋icon-->
+    <button
+      class="btn text-white p-2 d-lg-none ms-auto me-1"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapseExample"
+      aria-expanded="false"
+      aria-controls="collapseExample"
+    >
+      <i class="bi bi-search fs-4"></i>
+    </button>
+
+    <!--漢堡選單按鈕-->
+    <button
+      class="navbar-toggler border-0 text-white"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+    >
+      <i class="bi bi-list"></i>
+    </button>
+
+    <!--側邊欄-->
+    <div
+      class="offcanvas offcanvas-end p-5 p-lg-0 bg-white bg-opacity-8 border-white border-opacity-12 flex-grow-0"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <!--側邊欄標題-->
+      <div class="offcanvas-header p-0 mb-4">
+        <!--
+        關閉按鈕
+        原本的btn-close是svg檔案，無法調整顏色，所以載入icon
+        -->
+        <button
+          type="button"
+          class="btn text-white ms-auto p-2"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        >
+          <i class="bi bi-x-lg fs-4"></i>
+        </button>
+      </div>
+
+      <!--側邊欄內容-->
+      <div class="offcanvas-body p-0">
+        <!--下拉式選單-->
+        <div
+          class="navbar-nav pe-3 d-flex flex-column justify-content-between h-100"
+        >
+          <div class="nav-item dropdown">
+            <a
+              class="nav-link d-none d-lg-block text-white"
+              href="#"
+              id="offcanvasNavbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              探索 AI 工具<i class="bi bi-chevron-down ms-2"></i>
+            </a>
+            <p
+              class="h6 d-lg-none text-white p-3 border-bottom border-white border-opacity-12 mb-2"
+            >
+              探索 AI 工具
+            </p>
+            <ul
+              class="dropdown-menu bg-transparent bg-lg-white bg-opacity-lg-8 p-2"
+              aria-labelledby="offcanvasNavbarDropdown"
+            >
+              <li>
+                <a
+                  class="dropdown-item text-white p-2 mb-2 rounded-1"
+                  href="explore.html"
+                  >內容生成</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item text-white p-2 mb-2 rounded-1"
+                  href="explore.html"
+                  >視覺設計</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white p-2 mb-2 rounded-1" href="v"
+                  >影像製作</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item text-white p-2 mb-2 rounded-1"
+                  href="explore.html"
+                  >程式開發</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white p-2 mb-2 rounded-1" href="#"
+                  >教育與學習</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white p-2 mb-2" href="explore.html"
+                  >資料分析</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item text-white p-2 mb-2 rounded-1"
+                  href="explore.html"
+                  >生產力工具</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item text-white p-2 rounded-1"
+                  href="explore.html"
+                  >音樂創作</a
+                >
+              </li>
+            </ul>
+          </div>
+          <button
+            type="button"
+            class="btn btn-primary rounded-pill py-2 d-lg-none hover-bn"
+          >
+            登入/註冊
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--輸入框-->
+    <div
+      class="collapse d-lg-block p-3 p-lg-0 position-absolute start-0 end-0 top-100 position-lg-static navbar-collapse w-300"
+      id="collapseExample"
+    >
+      <div class="d-flex gap-1 align-items-center">
+        <div class="position-relative text-neutral-300 flex-grow-1 ms-4">
+          <i
+            class="bi bi-search position-absolute top-50 translate-middle-y navbar-control-icon me-2"
+          ></i>
+          <input
+            type="text"
+            class="form-control rounded-1 navbar-control-input w-300"
+            id="search-input"
+            placeholder="輸入工具名稱、功能或關鍵字"
+          />
+        </div>
+
+        <!--關閉按鈕-->
+        <button
+          class="btn text-white p-2 d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseExample"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+        >
+          <i class="bi bi-x-lg fs-4"></i>
+        </button>
+      </div>
+    </div>
+
+    <!--登入註冊-->
+    <a
+      href="login.html"
+      class="py-2 text-decoration-none d-none d-lg-block back-bt"
+      >登入/註冊</a
+    >
+  </div>
+</nav>
+    <main class="ai-bg pb-6 pb-lg-8">
+      <div class="container">
+        <!--麵包屑-->
+        <nav aria-label="breadcrumb mb-5">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#" class="text-decoration-none">探索 AI 工具</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="#" class="text-decoration-none">內容生成</a>
+            </li>
+            <li
+              class="breadcrumb-item active text-primary-200"
+              aria-current="page"
+            >
+              WriteCraft AI
+            </li>
+          </ol>
+        </nav>
+
+        <!--圖片預覽區-->
+        <div class="row">
+          <!--WriteCraft AI 卡片-->
+          <div class="col-12 mb-5">
+            <div
+              class="bg-white bg-opacity-8 border-primary-100 bg-blur24 p-5 p-lg-6 rounded-2"
+            >
+              <div class="d-flex mb-3 justify-content-between">
+                <div>
+                  <img
+                    src="data:image/png;base64,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"
+                    alt=""
+                    class="img-64"
+                  />
+                </div>
+                <div>
+                  <a
+                    href="plan.html"
+                    class="py-2 px-5 rounded-pill text-decoration-none align-items-center justify-content-center hover-bn"
+                  >
+                    我要訂閱
+                  </a>
+                </div>
+              </div>
+              <h3 class="mb-1">WriteCraft AI</h3>
+              <p class="text-neutral-200 mb-2">內容生成</p>
+              <p>
+                快速產出文案，從社群貼文、部落格文章到產品介紹，依不同目的生成合適內容。
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--WriteCraft AI 卡片-->
+        <div
+          class="row d-flex flex-nowrap overflow-x-auto flex-lg-wrap scrollbar-hide gx-5 mb-6 mb-lg-8"
+        >
+          <div class="col-9 col-lg-4">
+            <div class="detail-border rounded-2">
+              <img
+                src="/2026_HexSchool_Layout_mission6/assets/detail-sample-1-DhrNNjtZ.png"
+                alt="detail-sample-1"
+              />
+            </div>
+          </div>
+          <div class="col-9 col-lg-4">
+            <div class="detail-border rounded-2">
+              <img
+                src="/2026_HexSchool_Layout_mission6/assets/detail-sample-2-B2fvFOBV.png"
+                alt="detail-sample-2"
+              />
+            </div>
+          </div>
+          <div class="col-9 col-lg-4">
+            <div class="detail-border rounded-2">
+              <img
+                src="/2026_HexSchool_Layout_mission6/assets/detail-sample-3-Bl178VFz.png"
+                alt="detail-sample-3"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!--介紹區域-->
+        <!--工具介紹-->
+        <div class="py-6 py-lg-8 special-border-top">
+          <div class="d-flex mb-3 align-items-center">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAmNJREFUeAHNVc1qU0EUPmcm3QlJQFyngoILQcStJHVRCLioiwpdtfgE9QmSPEHoEzRdqIiLoqLX6iJZC0J3ggo3D1C9re2q3DvHb+bOjbXF+1ModGCYycz5znfOd87cEF2m8ePZ3lr4fG+pCkZVMtaqx8SblTBlDb+/ijoJUytR3AhfRJ2yuNIEsZhVYSbDRAlLryyOyxh93Y5aJqZQkZAyRJpJDMV3bz6+tluELZXBsfDYKIZTZKCYEgTGNDcsgy0k+LId9RKSliFh1AAEiN5KRdL+9vJnIUmuRJ9fHwxFZL1G8C7ESiCRQCJMuzJ+a+b+jeXmoBLB+F10p2Z4CCcdDTfKCCNVrJ7E720tOHF30znDC/MrzWkuwafgsKNFegC0lY3YWA2xMT5y2Lgzn4nLAC603+N8pEVtgWjyD8Gbnd9LkGFTC9d9tM5B5ijb22xAxi4rVMLfiQ1Gk1spvacpKjWYX7k6SotsqAFX+8be48T4fncTXSO+sIktBboJ74ATcnc4BwZ2Mbkz9rgGid4/I1EAiRDcKg7XdBqZk4DNLFryNbCyuMJndji3kU+g6ODW8imJTo8giFpQdgxHLQuugZVAorNCu1qkRHZFEBOdyOD2Cce5BH+JDvoA9zJ9s5nq7AtvZOPeo+b6/3zkPrRut943IhtW2xP6pt8jxAbdB3nOCzPIxofgcIxat12HzTqKwvsP69eLsKW+RUrzU5cFzzqHYm0elMKWMVpcvLKLwCeuRdNWHS10z77acxPYkaD98E6c/sfEW3QR4+3Ho1/vd47CKphaFeNYmSf4U2jQZRp/AEyrLfXXkOU6AAAAAElFTkSuQmCC"
+              alt=""
+              class="me-3 img-24"
+            />
+            <h3>工具介紹</h3>
+          </div>
+          <p class="mb-1 text-neutral-200">
+            WriteCraft AI 專為追求速度與品質的內容創作者而生。
+          </p>
+          <p class="mb-1 text-neutral-200">
+            無論您需要的是一則引人入勝的 Instagram 貼文、結構嚴謹的 SEO
+            部落格文章，還是具備說服力的 產品描述文案，WriteCraft AI
+            都能精準捕捉您的需求。
+          </p>
+          <p class="text-neutral-200">
+            只需輸入主題與關鍵字，系統將根據不同的創作目的自動調整語氣與排版，幫助您在幾秒鐘內產出多種版本的專業內容，徹底解決您的靈感枯竭期。
+          </p>
+        </div>
+        <!--功能特點-->
+        <div class="py-6 py-lg-8 special-border-top">
+          <div class="d-flex mb-3 align-items-center">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAmNJREFUeAHNVc1qU0EUPmcm3QlJQFyngoILQcStJHVRCLioiwpdtfgE9QmSPEHoEzRdqIiLoqLX6iJZC0J3ggo3D1C9re2q3DvHb+bOjbXF+1ModGCYycz5znfOd87cEF2m8ePZ3lr4fG+pCkZVMtaqx8SblTBlDb+/ijoJUytR3AhfRJ2yuNIEsZhVYSbDRAlLryyOyxh93Y5aJqZQkZAyRJpJDMV3bz6+tluELZXBsfDYKIZTZKCYEgTGNDcsgy0k+LId9RKSliFh1AAEiN5KRdL+9vJnIUmuRJ9fHwxFZL1G8C7ESiCRQCJMuzJ+a+b+jeXmoBLB+F10p2Z4CCcdDTfKCCNVrJ7E720tOHF30znDC/MrzWkuwafgsKNFegC0lY3YWA2xMT5y2Lgzn4nLAC603+N8pEVtgWjyD8Gbnd9LkGFTC9d9tM5B5ijb22xAxi4rVMLfiQ1Gk1spvacpKjWYX7k6SotsqAFX+8be48T4fncTXSO+sIktBboJ74ATcnc4BwZ2Mbkz9rgGid4/I1EAiRDcKg7XdBqZk4DNLFryNbCyuMJndji3kU+g6ODW8imJTo8giFpQdgxHLQuugZVAorNCu1qkRHZFEBOdyOD2Cce5BH+JDvoA9zJ9s5nq7AtvZOPeo+b6/3zkPrRut943IhtW2xP6pt8jxAbdB3nOCzPIxofgcIxat12HzTqKwvsP69eLsKW+RUrzU5cFzzqHYm0elMKWMVpcvLKLwCeuRdNWHS10z77acxPYkaD98E6c/sfEW3QR4+3Ho1/vd47CKphaFeNYmSf4U2jQZRp/AEyrLfXXkOU6AAAAAElFTkSuQmCC"
+              alt=""
+              class="me-3 img-24"
+            />
+            <h3>工具介紹</h3>
+          </div>
+          <ul class="ps-0">
+            <li class="mb-1 text-neutral-200 list-style-inside">
+              瞬時文案生成：針對社群媒體特性優化，提供長短不一、帶有 Emoji
+              且符合平台風格的貼文內容。
+            </li>
+            <li class="mb-1 text-neutral-200 list-style-inside">
+              目的導向模組：預設超過 50
+              種寫作場景，包含產品簡介、電子報、短片腳本及廣告標題。
+            </li>
+            <li class="mb-1 text-neutral-200 list-style-inside">
+              深度部落格架構：從標題吸引力、內文段落到結尾呼籲，自動生成符合邏輯且易於閱讀的長文。
+            </li>
+            <li class="text-neutral-200 list-style-inside">
+              語氣隨心轉換：一鍵將嚴肅的專業說明轉化為活潑的行銷語言，適配不同品牌的調性。
+            </li>
+          </ul>
+        </div>
+        <!--好評推薦-->
+        <div class="py-6 py-lg-8 special-border-top">
+          <div class="d-flex mb-3 align-items-center">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAmNJREFUeAHNVc1qU0EUPmcm3QlJQFyngoILQcStJHVRCLioiwpdtfgE9QmSPEHoEzRdqIiLoqLX6iJZC0J3ggo3D1C9re2q3DvHb+bOjbXF+1ModGCYycz5znfOd87cEF2m8ePZ3lr4fG+pCkZVMtaqx8SblTBlDb+/ijoJUytR3AhfRJ2yuNIEsZhVYSbDRAlLryyOyxh93Y5aJqZQkZAyRJpJDMV3bz6+tluELZXBsfDYKIZTZKCYEgTGNDcsgy0k+LId9RKSliFh1AAEiN5KRdL+9vJnIUmuRJ9fHwxFZL1G8C7ESiCRQCJMuzJ+a+b+jeXmoBLB+F10p2Z4CCcdDTfKCCNVrJ7E720tOHF30znDC/MrzWkuwafgsKNFegC0lY3YWA2xMT5y2Lgzn4nLAC603+N8pEVtgWjyD8Gbnd9LkGFTC9d9tM5B5ijb22xAxi4rVMLfiQ1Gk1spvacpKjWYX7k6SotsqAFX+8be48T4fncTXSO+sIktBboJ74ATcnc4BwZ2Mbkz9rgGid4/I1EAiRDcKg7XdBqZk4DNLFryNbCyuMJndji3kU+g6ODW8imJTo8giFpQdgxHLQuugZVAorNCu1qkRHZFEBOdyOD2Cce5BH+JDvoA9zJ9s5nq7AtvZOPeo+b6/3zkPrRut943IhtW2xP6pt8jxAbdB3nOCzPIxofgcIxat12HzTqKwvsP69eLsKW+RUrzU5cFzzqHYm0elMKWMVpcvLKLwCeuRdNWHS10z77acxPYkaD98E6c/sfEW3QR4+3Ho1/vd47CKphaFeNYmSf4U2jQZRp/AEyrLfXXkOU6AAAAAElFTkSuQmCC"
+              alt=""
+              class="me-3 img-24"
+            />
+            <h3>好評推薦</h3>
+          </div>
+          <div
+            class="row d-flex flex-nowrap overflow-x-auto flex-lg-wrap scrollbar-hide gx-5 mb-6 mb-lg-8"
+          >
+            <div class="col-9 col-lg-3">
+              <div
+                class="bg-white bg-opacity-8 border-white border-opacity-12 bg-blur24 p-5 rounded-2 h-100 d-flex flex-column"
+              >
+                <div class="mb-4">
+                  <h5 class="mb-2">經營社群媒體的救星！</h5>
+                  <p class="text-neutral-200">
+                    身為社群小編，每天要想不同平台的文案真的很累。自從用了
+                    WriteCraft，我只要輸入產品特點，它就能自動幫我寫好 FB、IG 和
+                    Threads 的版本，效率提升至少三倍！
+                  </p>
+                </div>
+                <div
+                  class="border-top border-white border-opacity-12 d-flex pt-4 align-items-center mt-auto"
+                >
+                  <img
+                    src="/2026_HexSchool_Layout_mission6/assets/command-%E5%B0%8F%E6%98%8E-D_1rhcci.png"
+                    alt="person"
+                    class="me-2 img-48"
+                  />
+                  <div>
+                    <h6 class="mb-1">陳小安</h6>
+                    <p class="text-neutral-200">行銷社群經理</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-9 col-lg-3">
+              <div
+                class="bg-white bg-opacity-8 border-white border-opacity-12 bg-blur24 p-5 rounded-2 h-100 d-flex flex-column"
+              >
+                <div class="mb-4">
+                  <h5 class="mb-2">高轉化率的秘密武器！</h5>
+                  <p class="text-neutral-200">
+                    身為斜槓接案者，現在有了
+                    WriteCraft，只要把訪談筆記丟進去，不到一分鐘就能產出三種不同語氣的草稿。它幫我省下了
+                    70% 的創作時間，讓我有更多精力去開發新客戶！
+                  </p>
+                </div>
+                <div
+                  class="border-top border-white border-opacity-12 d-flex pt-4 align-items-center mt-auto"
+                >
+                  <img
+                    src="/2026_HexSchool_Layout_mission6/assets/command-%E5%B0%8F%E7%BE%8E-CkCdMxaU.png"
+                    alt="person"
+                    class="me-2 img-48"
+                  />
+                  <div>
+                    <h6 class="mb-1">李沐</h6>
+                    <p class="text-neutral-200">獨立內容創作者</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-9 col-lg-3">
+              <div
+                class="bg-white bg-opacity-8 border-white border-opacity-12 bg-blur24 p-5 rounded-2 h-100 d-flex flex-column"
+              >
+                <div class="mb-4">
+                  <h5 class="mb-2">不再為 A/B Test 抓破頭！</h5>
+                  <p class="text-neutral-200">
+                    投放廣告最需要的就是大量的文案素材。以前測試 10
+                    組標題要寫兩小時，WriteCraft
+                    就能根據廣告心理學生成多組變體。它產出的文案結構紮實，而且非常符合廣告審核規範，簡直是廣告人的救星。
+                  </p>
+                </div>
+                <div
+                  class="border-top border-white border-opacity-12 d-flex pt-4 align-items-center mt-auto"
+                >
+                  <img
+                    src="/2026_HexSchool_Layout_mission6/assets/command-%E5%B0%8F%E8%8F%AF-BYfDPSq2.png"
+                    alt="person"
+                    class="me-2 img-48"
+                  />
+                  <div>
+                    <h6 class="mb-1">王小明</h6>
+                    <p class="text-neutral-200">資深數位廣告投放師</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-9 col-lg-3">
+              <div
+                class="bg-white bg-opacity-8 border-white border-opacity-12 bg-blur24 p-5 rounded-2 h-100 d-flex flex-column"
+              >
+                <div class="mb-4">
+                  <h5 class="mb-2">新聞稿的高效助手</h5>
+                  <p class="text-neutral-200">
+                    在公關領域，文字的精準度就是一切。WriteCraft
+                    不僅能幫忙潤飾生硬的新聞稿，還能在緊急時刻協助草擬回應聲明。最讓我驚艷的是它的邏輯性，確保傳遞給媒體的信息專業且不失溫度。
+                  </p>
+                </div>
+                <div
+                  class="border-top border-white border-opacity-12 d-flex pt-4 align-items-center mt-auto"
+                >
+                  <img
+                    src="/2026_HexSchool_Layout_mission6/assets/command-%E5%B0%8F%E5%AE%89-C5ql6nmS.png"
+                    alt="person"
+                    class="me-2 img-48"
+                  />
+                  <div>
+                    <h6 class="mb-1">許小美</h6>
+                    <p class="text-neutral-200">科技公司公關經理</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--你可能也喜歡-->
+      <div class="py-6 py-lg-8 like-bg">
+        <div class="container">
+          <h2 class="mb-5">你可能也喜歡</h2>
+          <div
+            class="row d-flex flex-nowrap overflow-x-auto flex-lg-wrap scrollbar-hide gx-5 mb-6 mb-lg-8"
+          >
+            <div class="col-9 col-lg-3">
+              <a
+                href="#"
+                class="text-decoration-none d-block p-5 h-100 deco-card"
+              >
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAA/pJREFUeAHtm09PE0EYxp8pQjR6QBPin8RQQkiUg4ByECJJiycMxoJHD9B4MMIB+AS0nwD8BNSLV2tUOCk1JnrDejHqhT15Fa8QOj6zbCNi2b+z29buL5ns0s5u9332fd7ZZWeBmJiYmJjWRSBiJm/JlJSYYUvxz6R1FGUeSLmSwIuN96KICIlMACvwZStwOwy2qfUPoowICF2AzE2Z3E1gRa162U4IFNrbkS+WhIEQCU2ATEp27u5igT+wKIFO+CfHbMgjJEIRYGJMZsS+edaT0IPBlqcQBWhGqwAefO6XckcHpnTaQosAKt339szAFxEBOutDYAHujMplDT73g8FWCFoffAug0r1SwRr0+dwvBgLUB88CqGFtrw1rIfrcL0XWhyWvtkh46Tw5Ihc4pm83YPCKDIfdbWVJLxu5FkDtuCKwisYn50UEVxbgDme5WEMTwSxd2vgoHE+YowDWFd0n1L/YeWWHNaGHNWHHrpOjBfbnkBG3my549A+gc3wCs079Tjh1kF2YEeNMlSGuv2XbQkPTdQEYHgFOnzHT+x4/srWBowDcyaBUK2e5fp+tnyK8ZvuJhkIFPDxKAc7/+UwKDDpt55wBR6/wrlIE1basjKizEO0dZrqj70qNL6Xz1amjAMdynSL0cFlHW/TxRPRfOxDBL/4FUFRtwRoh19m+IBKUzwduMDXPITDBBKiihHgQvi1q+TwoegSoomzBpmyBLX1CqBRX6a58HiTda6FXAAtlCXDY1FEfkr1M92H9gVcJRQCTw/XhGdsPT1ubPlcFTme61yI8AaooIebd1wflcxV4dy8iIXwBqhyqD/LNv1+H6XM7ohPAotZl9aXLBz5XZz9qIhfApFofOKSNfQ/f53bUR4AqFxn8L9QVT/8S+x+JBUCLEwuAFicWAC2OowDy4NlbcyLhOM0m4aLDOzQpIqFBAGZAAc2KxFOnLo4CvEqLEhclNBlCoJx9bB67La6KIG8Ysnw+sINmQfJYJabcdHUlQDEtjDYgLZqhIDJ4IZHm2TfcdHc9DFKEshKBq5FMYPQD077ENpSddz/J0tcUmbub5uPyZanhifH0V+jAYMVfyj7yPs020CSpyU2Z48LTjIyjBBKA6c7nf08SJ7GazQpfNSrwLLHMpkzuAzlmwwx84FcApnqRAiy59fqx+4EmKMQghXju1RZeBVA+Z+B5N0Ocq/1BM17rg2sBVLoD+YdzQus8Je03Qy/TomCNFtomOKvAxSn06A5eEep0eTf1wS4DrHTPBvW5HZG8MEFbqHcFVmrZ4hgBDB5YVpfP7Yj0lZla9eEvAULyuR2RvzOk4PVDiosUf7x7+htQqeBzwuXNS0xMTEyMRn4DTHw3tpJka1YAAAAASUVORK5CYII="
+                  alt=""
+                  class="img-64 mb-4"
+                />
+                <h4 class="text-truncate mb-1">Meeting Notes AI</h4>
+                <p class="text-neutral-200 text-truncate mb-2">生產力工具</p>
+                <p class="line-clamp-2">
+                  將會議內容轉換成結構化筆記，標示重點與待辦事項，幫助團隊在會後快速對齊共識並持續追蹤進度。
+                </p>
+              </a>
+            </div>
+            <div class="col-9 col-lg-3">
+              <a
+                href="#"
+                class="text-decoration-none d-block p-5 h-100 deco-card"
+              >
+                <img
+                  src="data:image/png;base64,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"
+                  alt=""
+                  class="img-64 mb-4"
+                />
+                <h4 class="text-truncate mb-1">PixelMind Studio</h4>
+                <p class="text-neutral-200 text-truncate mb-2">影像製作</p>
+                <p class="line-clamp-2">
+                  只需輸入簡單描述，就能生成插畫、社群圖片與設計素材，適合缺乏設計資源的團隊或個人。
+                </p>
+              </a>
+            </div>
+            <div class="col-9 col-lg-3">
+              <a
+                href="#"
+                class="text-decoration-none d-block p-5 h-100 deco-card"
+              >
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAABBlJREFUeAHtm01vE0cYx/+zqRMTqcS0vbbyN6hzqUrpwT725eB8gLTmG6SHor6JLoQD4jVIIHEiiSBCnJIDbxISiYR4OeYbsFdeDgESXuzsPsyzTgJJNt7xzHhjvPu72JrVjGZ+Hu8888wukJGRkWGJN2/cIj4xxPqXX3+kMvkoBZ/Bu3VPzKEN3r38r0oQk/JrIWxUCHfg86NH2mmDZt0CXr+tBkFQdOAsiNHjC0iAUMDPPxB3vvZRudffj8rcgvDiGuBfXTT8xxENTw3sHT8IBejqX0Xy/XkQih/qC1eMnmhLog6OHHwNmwfPFOt1zFfLVIxrgOrBWGS5bPPdq8P/QwE5+NmPB9+sTy5dPqRU3wSHCOUdrilJEGvTPgoicuMk0ORYQY62FHktAQlOzHXlmbAT8RLyhZb1OywhTgCzLqEATVRmQsv6HZSgIoAp1hu9KUFVAPeg1IsS1AU0e9AdEq4c+h2WaE9Aswe7L4FoypaE9gWEPUCp0cBZGMAS6suHtQdhS4KegLADqP1yIIwgtQkCmlotO7sqQVtAswOoXThTNeqA/2Wf63/TB12khAma+bMETYwEMHfvDOP86RGY4A/nYCChQAHmdSUYC2BYwqWLP8EElkBfaXdHW4IVAcz1uf24dqUCExrf9YOGkpVgTQDDAowk5KSEAxYkyO21agWrApiukCBzC6oSrAtgrEkYFNBC5hZUJXREAGNDwmoCEjomgDGVwIPvtISOCmBYwPXZ/dAllCCXSP0G1iRw0jWCjgtgrs1U8PSJ9t4pjA+Cr/WjxVDC8uvIsD0RASvL+TBOMMEkXG5CVZr5Z1uMkIgAZl5GiyYYLIsbBLRa3lqWmACeBSsreWiTg/7NcAP6dmtJYgIYltBtOEJgCSmGZ8AiUowjzwDn5D8rtbPAkQegS/J8q+OHkN1KeBO8cV9MyI9zSCEbq8DNB2JMEKaRMjYtgzceilraJGyLA9ImITIQCiUILCAF7BgJ5nIYkRJ6PkbYUQAvj1JCpdcltNwLpEFC7Gao1yUo7QZZgu+Dz788GPDs+RcuTBiEC8sob4dvPxJeEIAznB40+ffv2jQBSs8ORlH/fnBaLtHa9aNoKx9gQ8KeveNTJhLEbydlfbK2d2k7IdINEvpGT7m2JGhlhGxJkNnaP6CJLQnaKTEbEvJD4xNE+oOwIcEoJ2hlJgwdc3dTgnFS9FOXYCUrzBLkx4hJak1FQr5F+7oSrKXFZUJlUd7ZK60k3I55/6ClBBKLYp/bUnCsBMKLrUVWzwViJCil3CIlkPAocJSexFqTEJnPcFb7JraVwTLrErD5nnBOZp9dxSaaEgRViMQRjhcGAmd4zz7XU60vJdS2zIQlATEiDh73kCT8noHJI7U2oMmxIjIyMjIyMiJ5DzzrTf95g54/AAAAAElFTkSuQmCC"
+                  alt=""
+                  class="img-64 mb-4"
+                />
+                <h4 class="text-truncate mb-1">CodePilot Pro</h4>
+                <p class="text-neutral-200 text-truncate mb-2">程式開發</p>
+                <p class="line-clamp-2">
+                  專為工程師設計的 AI
+                  助手，協助產生程式碼、解釋複雜邏輯，讓你專注在更高價值的開發工作。
+                </p>
+              </a>
+            </div>
+            <div class="col-9 col-lg-3">
+              <a
+                href="#"
+                class="text-decoration-none d-block p-5 h-100 deco-card"
+              >
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAABSJJREFUeAHtWs2OHDUQrvLMvsfuI3DIgVOCkFiBhARCkAsXnmSGvMgS5QQRAg4ICcQBLlyQeIQsrwGZrtj1Y3sm2el29fQkUvxpd9ztsd22u36+Kg9AR0dHR0dHR0dHR8fbCISFsXv6HQHGxwSUp4WQ7pEw33OJK66HWI/cXvrQ+sF1gAWx6OAJsh4kvQNdtq4x1RPXc6Fl2gdI/3E7YGEsvgFEaWWyfrTlxIWTLB3tL13HSt6hgWzhtnHLYXkJ2L+luLi0KbwX+Tt66eJsmC1iu5vH25D0mP/jAuOY8V7K9TqWQ7yXEtZRz2XPkW1BAIztQPtzH+DL6jqOkTrwfeo/SD1on4t797+GGVjDTATEDc+QRGWRFVh0n+IyVl88nLXJz//8dQCxIxjFB7KBZPCTZ23AyVQAcX+drPmnkGiywuwIVsPOtxGzN4ByKd4N9J91PJzAiCHwilEXS2Ygk4DRfC/RrAJ0c3O5XxNuucBgDg2yAxtOIAJEt7y5sGInyjaD3Ubcl1hF//x1WTfHd969hQa024Dn8EwIC7Auhq++XNRXr+9fXx37/r+//yhESykGNMCnAkLY6FDvXwd0HmwiPCrXLgFq5BOTKQxvOnY/fv9MXFhNhYUOp3L1wUdXTQMyoYryGBA8NqF9AwZ+GGFoF7eEON9LsxPKCJkHinUf2kWq8oieF9KuAmqDvRaY1SaxQXFsKPEPiKF3oJ4HOZikwwYUP+x5oAxRBUhUNhMxuAas3vwZVIDM9u2x+Tuxe/rtlvU8gekvbpnOJingVx+rVon6Rr827GD3+y+b1FSocICL9663x8ZHEClIBpDOsgFCdJSSTuqwUQvNrnP18adHe/3/28/RvgSQBbFkbEfGJ/1wqZDPDSaRJZpkB0w8y8fIhFi8SLuOGzW3GtrzwAWcTPMtxpduUxakTSfy/Drhgo542hsL8NuZMkmx+nozxXOQEOoYSU4yMlRLooOYeTYA84OnpazojuujfWhqc8rrdgVHTgloYIFlUjlWOgrOJ+SU2GjzSu7RYw7aN4DM6GqKc6y5NCyfE54gcdZ0VqeqSB4/4GCCWL3J8Tmi5gaU6413YNXK16PNKxrocoPt+QAmQhp44BSbNjxKQQ7n+eIkdz/9sJE8YckDhpjrGwYpY9023jCxGaYYQXlIbC/nCq1o3gDck4BxrD5/uK3v4wYMQePW9BESQUo7EzckvfD1+x82rcISRvxCzmIDNJSzGLwdJuLCDO0anOG1T/ALHEawojWOCbPBkhgYNKkkg0YR9rixEkiBC+60uCZEoBXRJvwbJAGSOaKw3zSeSyDJztLQIQ/ODeA01FQitIfVJ59dwQmhPIhEtc7DBPeyMK8btRp6tMCxAWRJjNkG6CTQs0aZ1vmCoTdi7Qlkxtg5IY8XEEbncVkLgHmAnjbDmTJCxfWE8AZsAuWYxOOWPV5gy26c3Xn8f/xkA3Z0naBH5XJMDnwcPoicWRtkwauOuEUOS90QqXA+Fg/luF2+tyN37UvwaEjrHjiF6OAlM0HfPCFKEyu/69Ey5OOzg98IlbokTUEkiVOtypCtTT2utAHm/AMnkGXMi3sPZq1h/vG4pvAQ9Ijq4Ks7LhjGpbNK8UfxsTwmSMrL2uRgTJrMxvzjcXOHL3ODEsza8fZBuML5vKozlRYW2VkkjfnoPTc8DQ05wQ8klIcdZIn33qrUIFokZTU2ApafQZgA5B9XCcuVLJEdf4XpSdmOjo6Ojo6Ojo6Ojo5X4QWSCDc7z2TjgQAAAABJRU5ErkJggg=="
+                  alt=""
+                  class="img-64 mb-4"
+                />
+                <h4 class="text-truncate mb-1">VideoFlow AI</h4>
+                <p class="text-neutral-200 text-truncate mb-2">影像製作</p>
+                <p class="line-clamp-2">
+                  將文章或腳本轉換為影片，自動搭配畫面、字幕與音樂，適合快節奏的創作者或行銷團隊。
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark">
+  <div class="container py-lg-8 px-3 py-6">
+    <div class="row justify-content-between mb-4">
+      <div class="col-lg-8 mb-4">
+        <a class="navbar-brand" href="index.html"
+          ><img src="/2026_HexSchool_Layout_mission6/assets/Logo-BVlqBbcd.png" alt="logo" class="logo"
+        /></a>
+      </div>
+      <div class="col-lg-4">
+        <div>
+          <p class="text-white mb-2">訂閱我們，掌握最新 AI 工具與趨勢</p>
+          <div class="input-group mb-6 w-auto">
+            <input
+              type="email"
+              class="form-control bg-white border border-opacity-12 footer-input"
+              placeholder="helloworld@gmail.com"
+              aria-label="subscription"
+              aria-describedby="subscription"
+            />
+            <button class="btn btn-primary" type="button" id="subscription">
+              訂閱
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center pt-5 border-top border-secondary">
+      <p class="mb-1 text-neutral-200">Copyright ©2026 AI ToolVerse</p>
+      <p class="text-neutral-200">
+        Tool logos by <a href="#">BRIX Templates</a>, modified from original,
+        licensed under CC BY 4.0
+      </p>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

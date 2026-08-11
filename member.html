@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>首頁</title>
+
+    <!--Bootstrap Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <script type="module" crossorigin src="/2026_HexSchool_Layout_mission6/assets/main-B6OzCE-M.js"></script>
+    <link rel="stylesheet" crossorigin href="/2026_HexSchool_Layout_mission6/assets/main-DcZaEEq9.css">
+  </head>
+
+  <body>
+    <!--
+  navbar-expand-lg：在桌機版時全部展開
+-->
+
+<nav class="navbar navbar-expand-lg fixed-top py-3 py-lg-4">
+  <div class="container justify-content-start">
+    <!--Logo-->
+    <a class="navbar-brand" href="index.html">
+      <img src="/2026_HexSchool_Layout_mission6/assets/Logo-BVlqBbcd.png" alt="logo" class="logo" />
+    </a>
+
+    <!--手機版搜尋icon-->
+    <button
+      class="btn text-white p-2 d-lg-none ms-auto me-1"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapseExample"
+      aria-expanded="false"
+      aria-controls="collapseExample"
+    >
+      <i class="bi bi-search fs-4"></i>
+    </button>
+
+    <!--漢堡選單按鈕-->
+    <button
+      class="navbar-toggler border-0 text-white"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+    >
+      <i class="bi bi-list"></i>
+    </button>
+
+    <!--側邊欄-->
+    <div
+      class="offcanvas offcanvas-end p-5 p-lg-0 bg-white bg-opacity-8 border-white border-opacity-12 flex-grow-0"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <!--側邊欄標題-->
+      <div class="offcanvas-header p-0 mb-4">
+        <!--
+        關閉按鈕
+        原本的btn-close是svg檔案，無法調整顏色，所以載入icon
+        -->
+        <button
+          type="button"
+          class="btn text-white ms-auto p-2"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        >
+          <i class="bi bi-x-lg fs-4"></i>
+        </button>
+      </div>
+
+      <!--側邊欄內容-->
+      <div class="offcanvas-body p-0">
+        <!--下拉式選單-->
+        <div
+          class="navbar-nav pe-3 d-flex flex-column justify-content-between h-100"
+        >
+          <div class="nav-item dropdown">
+            <a
+              class="nav-link d-none d-lg-block text-white"
+              href="#"
+              id="offcanvasNavbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              探索 AI 工具<i class="bi bi-chevron-down ms-2"></i>
+            </a>
+            <p
+              class="h6 d-lg-none text-white p-3 border-bottom border-white border-opacity-12 mb-2"
+            >
+              探索 AI 工具
+            </p>
+            <ul
+              class="dropdown-menu bg-transparent bg-lg-white bg-opacity-lg-8 p-2"
+              aria-labelledby="offcanvasNavbarDropdown"
+            >
+              <li>
+                <a class="dropdown-item text-white p-2 mb-2 rounded-1" href="#"
+                  >內容生成</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white p-2 mb-2 rounded-1" href="#"
+                  >視覺設計</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white p-2 mb-2 rounded-1" href="#"
+                  >影像製作</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white p-2 mb-2 rounded-1" href="#"
+                  >程式開發</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white p-2 mb-2 rounded-1" href="#"
+                  >教育與學習</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white p-2 mb-2" href="#"
+                  >資料分析</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white p-2 mb-2 rounded-1" href="#"
+                  >生產力工具</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white p-2 rounded-1" href="#"
+                  >音樂創作</a
+                >
+              </li>
+            </ul>
+          </div>
+          <button
+            type="button"
+            class="btn btn-primary rounded-pill py-2 d-lg-none"
+          >
+            登入/註冊
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--輸入框-->
+    <div
+      class="collapse d-lg-block p-3 p-lg-0 position-absolute start-0 end-0 top-100 position-lg-static navbar-collapse"
+      id="collapseExample"
+    >
+      <div class="d-flex gap-1 align-items-center">
+        <div class="position-relative text-neutral-300 w-300 flex-grow-1 ms-4">
+          <i
+            class="bi bi-search position-absolute top-50 translate-middle-y navbar-control-icon"
+          ></i>
+          <input
+            type="text"
+            class="form-control rounded-1 navbar-control-input"
+            id="search-input"
+            placeholder="輸入工具名稱、功能或關鍵字"
+          />
+        </div>
+        <!--關閉按鈕-->
+        <button
+          class="btn text-white p-2 d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseExample"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+        >
+          <i class="bi bi-x-lg fs-4"></i>
+        </button>
+      </div>
+    </div>
+
+    <!--登入註冊-->
+    <a
+      href="member.html"
+      class="py-2 text-decoration-none d-none d-lg-block back-bt"
+      ><i class="bi bi-person me-2"></i>會員中心</a
+    >
+  </div>
+</nav>
+    <main class="member-bg pb-6 pb-lg-188">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 m-auto">
+            <!--返回上頁-->
+            <a href="#" class="text-decoration-none mb-5 back-bt">
+              <div class="d-flex">
+                <i class="bi bi-chevron-left me-2"></i>
+                <p>返回上頁</p>
+              </div>
+            </a>
+
+            <!--標題-->
+            <div class="d-flex justify-content-between">
+              <div
+                class="d-flex flex-column d-lg-flex flex-lg-row align-items-start align-items-lg-end mb-5"
+              >
+                <h3 class="me-2">訂閱 AutoTasker 的用戶</h3>
+                <p class="fs-sm text-neutral-200">共 5 筆</p>
+              </div>
+              <!--所有方案dropdown-->
+              <div class="dropdown">
+                <!--桌機版按鈕-->
+                <button
+                  class="btn py-2 px-3 bg-white bg-opacity-8 rounded-1 d-none d-lg-block mb-2 plan-bt"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  所有方案<i class="bi bi-chevron-down ms-2"></i>
+                </button>
+                <!--手機版按鈕-->
+                <button
+                  class="btn py-2 px-3 d-block d-lg-none mb-2 plan-bt bg-transparent border-0"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-filter fs-4"></i>
+                </button>
+                <!--方案選單-->
+                <ul
+                  class="dropdown-menu bg-white bg-opacity-8 border border-white border-opacity-12 rounded-1 p-2 bg-blur24"
+                  aria-labelledby="dropdownMenuButton1"
+                >
+                  <li>
+                    <a
+                      class="dropdown-item p-2 w-224 plan-item rounded-1"
+                      href="#"
+                      >免費方案</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item p-2 w-224 plan-item rounded-1"
+                      href="#"
+                      >基礎方案</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item p-2 w-224 plan-item rounded-1"
+                      href="#"
+                      >進階方案</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!--表格-->
+            <div class="table-responsive hide-scrollbar">
+              <table class="table text-nowrap">
+                <thead>
+                  <tr class="border-bottom-2 border-white border-opacity-12">
+                    <th scope="col" class="text-neutral-200 p-3">用戶名稱</th>
+                    <th scope="col" class="text-neutral-200 p-3">聯絡信箱</th>
+                    <th scope="col" class="text-neutral-200 p-3">方案</th>
+                    <th scope="col" class="text-neutral-200 p-3">訂閱日期</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    class="align-middle border-bottom-2 border-white border-opacity-12"
+                  >
+                    <td class="text-white table-padding">Alice Wang</td>
+                    <td class="text-white table-padding">alice@gmail.com</td>
+                    <td>
+                      <span
+                        class="badge fs-sm py-1 px-2 bg-white bg-opacity-8 bg-blur24 rounded-1 table-padding"
+                        >免費方案</span
+                      >
+                    </td>
+                    <td class="text-white table-padding">2026/01/12</td>
+                  </tr>
+                  <tr
+                    class="align-middle border-bottom-2 border-white border-opacity-12"
+                  >
+                    <td class="text-white table-padding">Brian Li</td>
+                    <td class="text-white table-padding">brian@company.com</td>
+                    <td>
+                      <span
+                        class="badge fs-sm py-1 px-2 bg-white bg-opacity-8 bg-blur24 rounded-1 table-padding text-success-200"
+                        >基礎方案</span
+                      >
+                    </td>
+                    <td class="text-white table-padding">2026/01/12</td>
+                  </tr>
+                  <tr
+                    class="align-middle border-bottom-2 border-white border-opacity-12"
+                  >
+                    <td class="text-white table-padding">Cathy Chen</td>
+                    <td class="text-white table-padding">cathy@startup.io</td>
+                    <td>
+                      <span
+                        class="badge fs-sm py-1 px-2 bg-white bg-opacity-8 bg-blur24 rounded-1 table-padding text-warning-200"
+                        >進階方案</span
+                      >
+                    </td>
+                    <td class="text-white table-padding">2026/01/12</td>
+                  </tr>
+                  <tr
+                    class="align-middle border-bottom-2 border-white border-opacity-12"
+                  >
+                    <td class="text-white table-padding">John Lin</td>
+                    <td class="text-white table-padding">
+                      john Lin@startup.io
+                    </td>
+                    <td>
+                      <span
+                        class="badge fs-sm py-1 px-2 bg-white bg-opacity-8 bg-blur24 rounded-1 table-padding text-warning-200 border-bottom-2 border-white border-opacity-12"
+                        >進階方案</span
+                      >
+                    </td>
+                    <td
+                      class="text-white table-padding border-bottom-2 border-white border-opacity-12"
+                    >
+                      2026/01/12
+                    </td>
+                  </tr>
+                  <tr
+                    class="align-middle border-bottom-2 border-white border-opacity-12"
+                  >
+                    <td class="text-white table-padding">Allen Wang</td>
+                    <td class="text-white table-padding">
+                      allenwang@startup.io
+                    </td>
+                    <td>
+                      <span
+                        class="badge fs-sm py-1 px-2 bg-white bg-opacity-8 bg-blur24 rounded-1 table-padding text-warning-200"
+                        >進階方案</span
+                      >
+                    </td>
+                    <td class="text-white table-padding">2026/01/12</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-dark">
+  <div class="container py-lg-8 px-3 py-6">
+    <div class="row justify-content-between mb-4">
+      <div class="col-lg-8 mb-4">
+        <a class="navbar-brand" href="index.html"
+          ><img src="/2026_HexSchool_Layout_mission6/assets/Logo-BVlqBbcd.png" alt="logo" class="logo"
+        /></a>
+      </div>
+      <div class="col-lg-4">
+        <div>
+          <p class="text-white mb-2">訂閱我們，掌握最新 AI 工具與趨勢</p>
+          <div class="input-group mb-6 w-auto">
+            <input
+              type="email"
+              class="form-control bg-white border border-opacity-12 footer-input"
+              placeholder="helloworld@gmail.com"
+              aria-label="subscription"
+              aria-describedby="subscription"
+            />
+            <button class="btn btn-primary" type="button" id="subscription">
+              訂閱
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center pt-5 border-top border-secondary">
+      <p class="mb-1 text-neutral-200">Copyright ©2026 AI ToolVerse</p>
+      <p class="text-neutral-200">
+        Tool logos by <a href="#">BRIX Templates</a>, modified from original,
+        licensed under CC BY 4.0
+      </p>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>
