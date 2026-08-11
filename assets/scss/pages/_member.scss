@@ -1,0 +1,53 @@
+.member-bg {
+  background: url("../../assets/images/detail-bg-content.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 140px;
+}
+
+//去除table的背景
+.table {
+  --bs-table-bg: transparent;
+}
+
+//在 table 裡面，除了 caption 之外（thead、tbody、tfoot）的 tr 裡，所有 class 是 table-padding 的元素
+.table > :not(caption) > tr > .table-padding {
+  padding: 14.5px 12px;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .pb-lg-188 {
+    padding-bottom: 188px;
+  }
+}
+
+.w-224 {
+  width: 224px;
+}
+
+.plan-bt {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  &:hover {
+    border-color: rgba(234, 220, 255, 1);
+  }
+}
+
+.dropdown-item.plan-item {
+  &:hover {
+    background-color: rgba($white, 0.08);
+  }
+  &:active {
+    background-color: rgba($white, 0.08);
+    color: $primary-200;
+  }
+}

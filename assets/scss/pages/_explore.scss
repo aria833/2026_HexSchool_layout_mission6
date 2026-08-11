@@ -1,0 +1,65 @@
+.main-bg {
+  background: url("/assets/images/main.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 76px;
+}
+
+.hero-bg {
+  background: url("/assets/images/exlore.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+//超過兩行的文字變成省略符號
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+  min-height: calc(1.5em * 2);
+}
+
+.page-link.active {
+  color: $neutral-600;
+  background-color: $primary-100;
+}
+
+.bi.disabled {
+  color: $neutral-300;
+}
+
+.page-item {
+  .page-link.page-hover {
+    border-color: transparent;
+    &:hover {
+      background-color: rgba($white, 0.08);
+    }
+  }
+}
+
+.order-bn {
+  background-color: transparent;
+  color: $white;
+
+  &:hover {
+    color: $primary-100;
+  }
+  &:active {
+    color: $primary-200;
+  }
+}
+
+.list-group-item.list-group-item-action.tool-nav {
+  &:hover {
+    color: $white;
+    background-color: rgba($white, 0.08);
+  }
+  &:active {
+    color: $primary-200;
+  }
+}

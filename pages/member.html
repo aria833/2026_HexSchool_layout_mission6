@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>首頁</title>
+
+    <!--Bootstrap Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body>
+    <%- include('./layout/header-member'); -%>
+    <main class="member-bg pb-6 pb-lg-188">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 m-auto">
+            <!--返回上頁-->
+            <a href="#" class="text-decoration-none mb-5 back-bt">
+              <div class="d-flex">
+                <i class="bi bi-chevron-left me-2"></i>
+                <p>返回上頁</p>
+              </div>
+            </a>
+
+            <!--標題-->
+            <div class="d-flex justify-content-between">
+              <div
+                class="d-flex flex-column d-lg-flex flex-lg-row align-items-start align-items-lg-end mb-5"
+              >
+                <h3 class="me-2">訂閱 AutoTasker 的用戶</h3>
+                <p class="fs-sm text-neutral-200">共 5 筆</p>
+              </div>
+              <!--所有方案dropdown-->
+              <div class="dropdown">
+                <!--桌機版按鈕-->
+                <button
+                  class="btn py-2 px-3 bg-white bg-opacity-8 rounded-1 d-none d-lg-block mb-2 plan-bt"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  所有方案<i class="bi bi-chevron-down ms-2"></i>
+                </button>
+                <!--手機版按鈕-->
+                <button
+                  class="btn py-2 px-3 d-block d-lg-none mb-2 plan-bt bg-transparent border-0"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-filter fs-4"></i>
+                </button>
+                <!--方案選單-->
+                <ul
+                  class="dropdown-menu bg-white bg-opacity-8 border border-white border-opacity-12 rounded-1 p-2 bg-blur24"
+                  aria-labelledby="dropdownMenuButton1"
+                >
+                  <li>
+                    <a
+                      class="dropdown-item p-2 w-224 plan-item rounded-1"
+                      href="#"
+                      >免費方案</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item p-2 w-224 plan-item rounded-1"
+                      href="#"
+                      >基礎方案</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item p-2 w-224 plan-item rounded-1"
+                      href="#"
+                      >進階方案</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!--表格-->
+            <div class="table-responsive hide-scrollbar">
+              <table class="table text-nowrap">
+                <thead>
+                  <tr class="border-bottom-2 border-white border-opacity-12">
+                    <th scope="col" class="text-neutral-200 p-3">用戶名稱</th>
+                    <th scope="col" class="text-neutral-200 p-3">聯絡信箱</th>
+                    <th scope="col" class="text-neutral-200 p-3">方案</th>
+                    <th scope="col" class="text-neutral-200 p-3">訂閱日期</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    class="align-middle border-bottom-2 border-white border-opacity-12"
+                  >
+                    <td class="text-white table-padding">Alice Wang</td>
+                    <td class="text-white table-padding">alice@gmail.com</td>
+                    <td>
+                      <span
+                        class="badge fs-sm py-1 px-2 bg-white bg-opacity-8 bg-blur24 rounded-1 table-padding"
+                        >免費方案</span
+                      >
+                    </td>
+                    <td class="text-white table-padding">2026/01/12</td>
+                  </tr>
+                  <tr
+                    class="align-middle border-bottom-2 border-white border-opacity-12"
+                  >
+                    <td class="text-white table-padding">Brian Li</td>
+                    <td class="text-white table-padding">brian@company.com</td>
+                    <td>
+                      <span
+                        class="badge fs-sm py-1 px-2 bg-white bg-opacity-8 bg-blur24 rounded-1 table-padding text-success-200"
+                        >基礎方案</span
+                      >
+                    </td>
+                    <td class="text-white table-padding">2026/01/12</td>
+                  </tr>
+                  <tr
+                    class="align-middle border-bottom-2 border-white border-opacity-12"
+                  >
+                    <td class="text-white table-padding">Cathy Chen</td>
+                    <td class="text-white table-padding">cathy@startup.io</td>
+                    <td>
+                      <span
+                        class="badge fs-sm py-1 px-2 bg-white bg-opacity-8 bg-blur24 rounded-1 table-padding text-warning-200"
+                        >進階方案</span
+                      >
+                    </td>
+                    <td class="text-white table-padding">2026/01/12</td>
+                  </tr>
+                  <tr
+                    class="align-middle border-bottom-2 border-white border-opacity-12"
+                  >
+                    <td class="text-white table-padding">John Lin</td>
+                    <td class="text-white table-padding">
+                      john Lin@startup.io
+                    </td>
+                    <td>
+                      <span
+                        class="badge fs-sm py-1 px-2 bg-white bg-opacity-8 bg-blur24 rounded-1 table-padding text-warning-200 border-bottom-2 border-white border-opacity-12"
+                        >進階方案</span
+                      >
+                    </td>
+                    <td
+                      class="text-white table-padding border-bottom-2 border-white border-opacity-12"
+                    >
+                      2026/01/12
+                    </td>
+                  </tr>
+                  <tr
+                    class="align-middle border-bottom-2 border-white border-opacity-12"
+                  >
+                    <td class="text-white table-padding">Allen Wang</td>
+                    <td class="text-white table-padding">
+                      allenwang@startup.io
+                    </td>
+                    <td>
+                      <span
+                        class="badge fs-sm py-1 px-2 bg-white bg-opacity-8 bg-blur24 rounded-1 table-padding text-warning-200"
+                        >進階方案</span
+                      >
+                    </td>
+                    <td class="text-white table-padding">2026/01/12</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

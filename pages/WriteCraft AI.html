@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>首頁</title>
+
+    <!--Bootstrap Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body>
+    <%- include('./layout/header'); -%>
+    <main class="ai-bg pb-6 pb-lg-8">
+      <div class="container">
+        <!--麵包屑-->
+        <nav aria-label="breadcrumb mb-5">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#" class="text-decoration-none">探索 AI 工具</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="#" class="text-decoration-none">內容生成</a>
+            </li>
+            <li
+              class="breadcrumb-item active text-primary-200"
+              aria-current="page"
+            >
+              WriteCraft AI
+            </li>
+          </ol>
+        </nav>
+
+        <!--圖片預覽區-->
+        <div class="row">
+          <!--WriteCraft AI 卡片-->
+          <div class="col-12 mb-5">
+            <div
+              class="bg-white bg-opacity-8 border-primary-100 bg-blur24 p-5 p-lg-6 rounded-2"
+            >
+              <div class="d-flex mb-3 justify-content-between">
+                <div>
+                  <img
+                    src="/assets/images/WriteCraft AI.png"
+                    alt=""
+                    class="img-64"
+                  />
+                </div>
+                <div>
+                  <a
+                    href="plan.html"
+                    class="py-2 px-5 rounded-pill text-decoration-none align-items-center justify-content-center hover-bn"
+                  >
+                    我要訂閱
+                  </a>
+                </div>
+              </div>
+              <h3 class="mb-1">WriteCraft AI</h3>
+              <p class="text-neutral-200 mb-2">內容生成</p>
+              <p>
+                快速產出文案，從社群貼文、部落格文章到產品介紹，依不同目的生成合適內容。
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--WriteCraft AI 卡片-->
+        <div
+          class="row d-flex flex-nowrap overflow-x-auto flex-lg-wrap scrollbar-hide gx-5 mb-6 mb-lg-8"
+        >
+          <div class="col-9 col-lg-4">
+            <div class="detail-border rounded-2">
+              <img
+                src="/assets/images/detail-sample-1.png"
+                alt="detail-sample-1"
+              />
+            </div>
+          </div>
+          <div class="col-9 col-lg-4">
+            <div class="detail-border rounded-2">
+              <img
+                src="/assets/images/detail-sample-2.png"
+                alt="detail-sample-2"
+              />
+            </div>
+          </div>
+          <div class="col-9 col-lg-4">
+            <div class="detail-border rounded-2">
+              <img
+                src="/assets/images/detail-sample-3.png"
+                alt="detail-sample-3"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!--介紹區域-->
+        <!--工具介紹-->
+        <div class="py-6 py-lg-8 special-border-top">
+          <div class="d-flex mb-3 align-items-center">
+            <img
+              src="/assets/images/octicon_sparkle-fill-16.png"
+              alt=""
+              class="me-3 img-24"
+            />
+            <h3>工具介紹</h3>
+          </div>
+          <p class="mb-1 text-neutral-200">
+            WriteCraft AI 專為追求速度與品質的內容創作者而生。
+          </p>
+          <p class="mb-1 text-neutral-200">
+            無論您需要的是一則引人入勝的 Instagram 貼文、結構嚴謹的 SEO
+            部落格文章，還是具備說服力的 產品描述文案，WriteCraft AI
+            都能精準捕捉您的需求。
+          </p>
+          <p class="text-neutral-200">
+            只需輸入主題與關鍵字，系統將根據不同的創作目的自動調整語氣與排版，幫助您在幾秒鐘內產出多種版本的專業內容，徹底解決您的靈感枯竭期。
+          </p>
+        </div>
+        <!--功能特點-->
+        <div class="py-6 py-lg-8 special-border-top">
+          <div class="d-flex mb-3 align-items-center">
+            <img
+              src="/assets/images/octicon_sparkle-fill-16.png"
+              alt=""
+              class="me-3 img-24"
+            />
+            <h3>工具介紹</h3>
+          </div>
+          <ul class="ps-0">
+            <li class="mb-1 text-neutral-200 list-style-inside">
+              瞬時文案生成：針對社群媒體特性優化，提供長短不一、帶有 Emoji
+              且符合平台風格的貼文內容。
+            </li>
+            <li class="mb-1 text-neutral-200 list-style-inside">
+              目的導向模組：預設超過 50
+              種寫作場景，包含產品簡介、電子報、短片腳本及廣告標題。
+            </li>
+            <li class="mb-1 text-neutral-200 list-style-inside">
+              深度部落格架構：從標題吸引力、內文段落到結尾呼籲，自動生成符合邏輯且易於閱讀的長文。
+            </li>
+            <li class="text-neutral-200 list-style-inside">
+              語氣隨心轉換：一鍵將嚴肅的專業說明轉化為活潑的行銷語言，適配不同品牌的調性。
+            </li>
+          </ul>
+        </div>
+        <!--好評推薦-->
+        <div class="py-6 py-lg-8 special-border-top">
+          <div class="d-flex mb-3 align-items-center">
+            <img
+              src="/assets/images/octicon_sparkle-fill-16.png"
+              alt=""
+              class="me-3 img-24"
+            />
+            <h3>好評推薦</h3>
+          </div>
+          <div
+            class="row d-flex flex-nowrap overflow-x-auto flex-lg-wrap scrollbar-hide gx-5 mb-6 mb-lg-8"
+          >
+            <div class="col-9 col-lg-3">
+              <div
+                class="bg-white bg-opacity-8 border-white border-opacity-12 bg-blur24 p-5 rounded-2 h-100 d-flex flex-column"
+              >
+                <div class="mb-4">
+                  <h5 class="mb-2">經營社群媒體的救星！</h5>
+                  <p class="text-neutral-200">
+                    身為社群小編，每天要想不同平台的文案真的很累。自從用了
+                    WriteCraft，我只要輸入產品特點，它就能自動幫我寫好 FB、IG 和
+                    Threads 的版本，效率提升至少三倍！
+                  </p>
+                </div>
+                <div
+                  class="border-top border-white border-opacity-12 d-flex pt-4 align-items-center mt-auto"
+                >
+                  <img
+                    src="/assets/images/command-小明.png"
+                    alt="person"
+                    class="me-2 img-48"
+                  />
+                  <div>
+                    <h6 class="mb-1">陳小安</h6>
+                    <p class="text-neutral-200">行銷社群經理</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-9 col-lg-3">
+              <div
+                class="bg-white bg-opacity-8 border-white border-opacity-12 bg-blur24 p-5 rounded-2 h-100 d-flex flex-column"
+              >
+                <div class="mb-4">
+                  <h5 class="mb-2">高轉化率的秘密武器！</h5>
+                  <p class="text-neutral-200">
+                    身為斜槓接案者，現在有了
+                    WriteCraft，只要把訪談筆記丟進去，不到一分鐘就能產出三種不同語氣的草稿。它幫我省下了
+                    70% 的創作時間，讓我有更多精力去開發新客戶！
+                  </p>
+                </div>
+                <div
+                  class="border-top border-white border-opacity-12 d-flex pt-4 align-items-center mt-auto"
+                >
+                  <img
+                    src="/assets/images/command-小美.png"
+                    alt="person"
+                    class="me-2 img-48"
+                  />
+                  <div>
+                    <h6 class="mb-1">李沐</h6>
+                    <p class="text-neutral-200">獨立內容創作者</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-9 col-lg-3">
+              <div
+                class="bg-white bg-opacity-8 border-white border-opacity-12 bg-blur24 p-5 rounded-2 h-100 d-flex flex-column"
+              >
+                <div class="mb-4">
+                  <h5 class="mb-2">不再為 A/B Test 抓破頭！</h5>
+                  <p class="text-neutral-200">
+                    投放廣告最需要的就是大量的文案素材。以前測試 10
+                    組標題要寫兩小時，WriteCraft
+                    就能根據廣告心理學生成多組變體。它產出的文案結構紮實，而且非常符合廣告審核規範，簡直是廣告人的救星。
+                  </p>
+                </div>
+                <div
+                  class="border-top border-white border-opacity-12 d-flex pt-4 align-items-center mt-auto"
+                >
+                  <img
+                    src="/assets/images/command-小華.png"
+                    alt="person"
+                    class="me-2 img-48"
+                  />
+                  <div>
+                    <h6 class="mb-1">王小明</h6>
+                    <p class="text-neutral-200">資深數位廣告投放師</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-9 col-lg-3">
+              <div
+                class="bg-white bg-opacity-8 border-white border-opacity-12 bg-blur24 p-5 rounded-2 h-100 d-flex flex-column"
+              >
+                <div class="mb-4">
+                  <h5 class="mb-2">新聞稿的高效助手</h5>
+                  <p class="text-neutral-200">
+                    在公關領域，文字的精準度就是一切。WriteCraft
+                    不僅能幫忙潤飾生硬的新聞稿，還能在緊急時刻協助草擬回應聲明。最讓我驚艷的是它的邏輯性，確保傳遞給媒體的信息專業且不失溫度。
+                  </p>
+                </div>
+                <div
+                  class="border-top border-white border-opacity-12 d-flex pt-4 align-items-center mt-auto"
+                >
+                  <img
+                    src="/assets/images/command-小安.png"
+                    alt="person"
+                    class="me-2 img-48"
+                  />
+                  <div>
+                    <h6 class="mb-1">許小美</h6>
+                    <p class="text-neutral-200">科技公司公關經理</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--你可能也喜歡-->
+      <div class="py-6 py-lg-8 like-bg">
+        <div class="container">
+          <h2 class="mb-5">你可能也喜歡</h2>
+          <div
+            class="row d-flex flex-nowrap overflow-x-auto flex-lg-wrap scrollbar-hide gx-5 mb-6 mb-lg-8"
+          >
+            <div class="col-9 col-lg-3">
+              <a
+                href="#"
+                class="text-decoration-none d-block p-5 h-100 deco-card"
+              >
+                <img
+                  src="/assets/images/Meeting Notes AI.png"
+                  alt=""
+                  class="img-64 mb-4"
+                />
+                <h4 class="text-truncate mb-1">Meeting Notes AI</h4>
+                <p class="text-neutral-200 text-truncate mb-2">生產力工具</p>
+                <p class="line-clamp-2">
+                  將會議內容轉換成結構化筆記，標示重點與待辦事項，幫助團隊在會後快速對齊共識並持續追蹤進度。
+                </p>
+              </a>
+            </div>
+            <div class="col-9 col-lg-3">
+              <a
+                href="#"
+                class="text-decoration-none d-block p-5 h-100 deco-card"
+              >
+                <img
+                  src="/assets/images/PixelMind Studio.png"
+                  alt=""
+                  class="img-64 mb-4"
+                />
+                <h4 class="text-truncate mb-1">PixelMind Studio</h4>
+                <p class="text-neutral-200 text-truncate mb-2">影像製作</p>
+                <p class="line-clamp-2">
+                  只需輸入簡單描述，就能生成插畫、社群圖片與設計素材，適合缺乏設計資源的團隊或個人。
+                </p>
+              </a>
+            </div>
+            <div class="col-9 col-lg-3">
+              <a
+                href="#"
+                class="text-decoration-none d-block p-5 h-100 deco-card"
+              >
+                <img
+                  src="/assets/images/CodePilot Pro.png"
+                  alt=""
+                  class="img-64 mb-4"
+                />
+                <h4 class="text-truncate mb-1">CodePilot Pro</h4>
+                <p class="text-neutral-200 text-truncate mb-2">程式開發</p>
+                <p class="line-clamp-2">
+                  專為工程師設計的 AI
+                  助手，協助產生程式碼、解釋複雜邏輯，讓你專注在更高價值的開發工作。
+                </p>
+              </a>
+            </div>
+            <div class="col-9 col-lg-3">
+              <a
+                href="#"
+                class="text-decoration-none d-block p-5 h-100 deco-card"
+              >
+                <img
+                  src="/assets/images/VideoFlow AI.png"
+                  alt=""
+                  class="img-64 mb-4"
+                />
+                <h4 class="text-truncate mb-1">VideoFlow AI</h4>
+                <p class="text-neutral-200 text-truncate mb-2">影像製作</p>
+                <p class="line-clamp-2">
+                  將文章或腳本轉換為影片，自動搭配畫面、字幕與音樂，適合快節奏的創作者或行銷團隊。
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

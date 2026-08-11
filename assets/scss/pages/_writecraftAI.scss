@@ -1,0 +1,47 @@
+.ai-bg {
+  background: url("../../assets/images/detail-bg-lg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 108px;
+}
+
+.detail-border {
+  border: 8px solid rgba(255, 255, 255, 0.2);
+}
+
+.img-24 {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.img-48 {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.special-border-top {
+  border-top: 1px solid;
+  border-image: linear-gradient(
+      to right,
+      rgba(155, 124, 255, 0.1),
+      rgba(108, 99, 204, 1),
+      rgba(155, 124, 255, 0.1)
+    )
+    1;
+}
+
+.list-style-inside {
+  list-style-position: inside;
+}
+
+.like-bg {
+  background: url("../../assets/images/detail-bg-content.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

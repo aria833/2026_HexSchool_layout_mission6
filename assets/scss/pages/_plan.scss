@@ -1,0 +1,79 @@
+.plan-bg {
+  background: url("../../assets/images/plan-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 108px;
+}
+
+.disabled-content {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.border-custom-1 {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.border-custom-2 {
+  border: 2px solid rgba(234, 220, 255, 1);
+}
+
+.sub-bt {
+  color: $primary-100;
+  border: 1px solid $primary-100;
+
+  &:hover,
+  &:active {
+    color: $primary-200;
+    border-color: $primary-200;
+  }
+}
+
+.sb-bt-2 {
+  color: $neutral-600;
+  background-color: $primary-100;
+  border: 1px solid $primary-100;
+
+  &:hover,
+  &:active {
+    background-color: $primary-200;
+    border: 1px solid $primary-200;
+  }
+}
+
+.back-bt {
+  &:hover {
+    color: $primary-200;
+  }
+
+  &:focus {
+    color: $primary-200;
+    text-decoration: underline;
+    text-decoration-color: $primary-200;
+  }
+}
+
+.nav-pills .pricing-tab {
+  // 清除 Bootstrap nav-link 原本的樣式
+  background-color: transparent;
+  border: 1px solid $primary-100;
+  color: $primary-100;
+  border-radius: 1000px;
+  padding: 8px 24px;
+
+  &:hover {
+    color: $primary-200;
+    border-color: $primary-200;
+    background-color: transparent;
+  }
+
+  &.active {
+    color: $neutral-600;
+    background-color: $primary-100;
+    border-color: $primary-100;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}

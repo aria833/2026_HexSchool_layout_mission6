@@ -1,0 +1,43 @@
+.login-bg {
+  background: url("../../assets/images/detail-bg-content.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 196px;
+}
+
+.login-divider {
+  border-top: 1px solid $neutral-200;
+  height: 1px;
+  flex-grow: 1;
+}
+
+.form-control.login {
+  padding: 9px 17px;
+  &::placeholder {
+    color: rgba(144, 144, 144, 1);
+  }
+}
+
+.form-check {
+  input {
+    background-color: $white;
+  }
+
+  .form-check-label {
+    display: block;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+      border-color: $primary-100;
+      box-shadow: 0 0 2px rgba($primary-100, 0.6);
+    }
+  }
+  .form-check-input:checked {
+    background-color: $primary-300;
+    color: $white;
+    border-color: $primary-100;
+    box-shadow: 0 0 2px rgba($primary-100, 0.6);
+  }
+}
