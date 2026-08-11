@@ -1,8 +1,8 @@
 //頁面向下滾動時，Navbar 加上底色（Transparent/100）與毛玻璃效果（Blur）
+
 html {
-  /* 設定頁面可滾動，並為滾動條定義時間軸 */
   scroll-timeline-name: --page-scroll;
-  scroll-timeline-axis: block; /* 沿著區塊軸 (垂直方向) 滾動 */
+  scroll-timeline-axis: block;
 }
 
 .navbar {
@@ -11,6 +11,17 @@ html {
   width: 100%;
   padding: 15px 50px;
   z-index: 1000;
+}
+
+/* Navbar 背景玻璃層 */
+.navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  z-index: -1;
+
+  background-color: transparent;
 
   animation: navbar-background-change forwards;
   animation-timeline: --page-scroll;
@@ -19,11 +30,11 @@ html {
 
 @keyframes navbar-background-change {
   from {
-    /* 0% 狀態 */
     background-color: transparent;
+    backdrop-filter: blur(0);
   }
+
   to {
-    /* 100% 狀態 */
     background-color: #ffffff1f;
     backdrop-filter: blur(24px);
   }
@@ -100,10 +111,13 @@ html {
 .navbar-collapse {
   background-color: rgba($white, 0.12);
   backdrop-filter: blur(24px);
+  border: 1px solid rgba($white, 0.12);
 }
 
 @media (min-width: 992px) {
   .navbar-collapse {
+    background-color: transparent;
+    border-color: transparent;
     background-color: unset;
     backdrop-filter: unset;
   }
